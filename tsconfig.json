@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/monorepo-nest-e2e"
+    },
+    {
+      "path": "./apps/monorepo-nest"
+    },
+    {
+      "path": "./shared"
+    },
+    {
+      "path": "./shared"
+    },
+    {
+      "path": "./database"
+    }
+  ]
+}
