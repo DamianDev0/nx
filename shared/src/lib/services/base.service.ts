@@ -35,13 +35,18 @@ export class GenericService<T extends BaseEntity> {
     return await this.repository.save(entity);
   }
 
-  async delete(id: string): Promise<T> {
-    const deletedItem = await this.repository.findOne({ where: { id } as any });
-    if (!deletedItem) {
+  async remove(id: string): Promise<T> {
+    const entity = await this.repository.findOne({ where: { id } as any });
+    if (!entity) {
       throw new NotFoundException(`Entity with ID ${id} not found`);
     }
     await this.repository.softDelete(id);
-    return deletedItem;
+    return entity;
+  }
+
+  // Backwards-compatible alias
+  async delete(id: string): Promise<T> {
+    return this.remove(id);
   }
 
   async findWithPagination(

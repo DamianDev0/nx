@@ -17,6 +17,12 @@
     },
     {
       "path": "./database"
+    },
+    {
+      "path": "./category"
+    },
+    {
+      "path": "./video-game"
     }
   ]
 }

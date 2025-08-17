@@ -30,7 +30,7 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["shared/*", "database/*"]
+      "exclude": ["shared/*", "database/*", "category/*", "video-game/*"]
     },
     {
       "plugin": "@nx/webpack/plugin",
@@ -57,7 +57,7 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["shared/*", "database/*"],
+      "include": ["shared/*", "database/*", "category/*", "video-game/*"],
       "options": {
         "typecheck": {
           "targetName": "typecheck"

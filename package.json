@@ -62,6 +62,8 @@
   "workspaces": [
     "apps/*",
     "shared",
-    "database"
+    "database",
+    "category",
+    "video-game"
   ]
 }
